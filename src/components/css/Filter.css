@@ -1,0 +1,96 @@
+/* Filter.css */
+
+/* Container for the filter component */
+.filter-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* flex-direction: column; */
+    background-color: #ffffff;
+    padding: 10px;
+  }
+  
+  /* Heading */
+  .filter-heading {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1f2937;
+    /* margin-bottom: 8px; */
+  }
+  
+  /* Dark mode for heading */
+  @media (prefers-color-scheme: dark) {
+    .filter-heading {
+      color: #e5e7eb;
+    }
+  }
+  
+  /* Form group (label + input/select) */
+  .filter-group {
+    /* margin-bottom: 12px; */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  /* Label */
+  .filter-label {
+    font-size: 0.875rem;
+    color: #374151;
+  }
+  
+  /* Dark mode for label */
+  @media (prefers-color-scheme: dark) {
+    .filter-label {
+      color: #d1d5db;
+    }
+  }
+  
+  /* Select and input elements */
+  .filter-select,
+  .filter-input {
+    padding: 8px;
+    font-size: 0.875rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #374151;
+  }
+  
+  /* Dark mode for select and input */
+  @media (prefers-color-scheme: dark) {
+    .filter-select,
+    .filter-input {
+      border-color: #4b5563;
+      background-color: #374151;
+      color: #e5e7eb;
+    }
+  }
+  
+  /* Focus state for select and input */
+  .filter-select:focus,
+  .filter-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  }
+  
+  /* Dark mode for focus state */
+  @media (prefers-color-scheme: dark) {
+    .filter-select:focus,
+    .filter-input:focus {
+      border-color: #60a5fa;
+      box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .filter-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        background-color: #ffffff;
+        padding: 10px;
+      }
+  }

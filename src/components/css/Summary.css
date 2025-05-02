@@ -1,0 +1,245 @@
+/* Summary.css */
+
+/* Container for the summary component */
+.summary-container {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 24px;
+  }
+  
+  /* Dark mode for container */
+  @media (prefers-color-scheme: dark) {
+    .summary-container {
+      background-color: #1f2937;
+    }
+  }
+  
+  /* Heading */
+  .summary-heading {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 16px;
+  }
+  
+  /* Dark mode for heading */
+  @media (prefers-color-scheme: dark) {
+    .summary-heading {
+      color: #e5e7eb;
+    }
+  }
+  
+  /* Sort container */
+  .sort-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  
+  /* Sort label */
+  .sort-label {
+    font-size: 0.875rem;
+    color: #374151;
+  }
+  
+  /* Dark mode for sort label */
+  @media (prefers-color-scheme: dark) {
+    .sort-label {
+      color: #d1d5db;
+    }
+  }
+  
+  /* Sort select */
+  .sort-select {
+    padding: 8px;
+    font-size: 0.875rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #374151;
+    max-width: 200px;
+  }
+  
+  /* Dark mode for sort select */
+  @media (prefers-color-scheme: dark) {
+    .sort-select {
+      border-color: #4b5563;
+      background-color: #374151;
+      color: #e5e7eb;
+    }
+  }
+  
+  /* Focus state for sort select */
+  .sort-select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  }
+  
+  /* Dark mode for focus state */
+  @media (prefers-color-scheme: dark) {
+    .sort-select:focus {
+      border-color: #60a5fa;
+      box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+    }
+  }
+  
+  /* List container */
+  .summary-list {
+    margin-bottom: 24px;
+    list-style: none;
+  }
+  
+  /* No categories message */
+  .no-categories {
+    color: #6b7280;
+    font-size: 0.875rem;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  /* Dark mode for no categories */
+  @media (prefers-color-scheme: dark) {
+    .no-categories {
+      color: #9ca3af;
+    }
+  }
+  
+  /* List item */
+  .summary-list-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    color: #374151;
+    border-bottom: 1px solid #f3f4f6;
+    animation: fadeIn 0.3s ease-in;
+  }
+  
+  /* Alternating background for list items */
+  .summary-list-item:nth-child(even) {
+    background-color: #f9fafb;
+  }
+  
+  /* Dark mode for list item */
+  @media (prefers-color-scheme: dark) {
+    .summary-list-item {
+      color: #e5e7eb;
+      border-bottom: 1px solid #374151;
+    }
+    .summary-list-item:nth-child(even) {
+      background-color: #374151;
+    }
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Positive amount (green) */
+  .amount-positive {
+    color: #16a34a;
+  }
+  
+  /* Negative amount (red) */
+  .amount-negative {
+    color: #dc2626;
+  }
+  
+  /* Chart container */
+  .chart-container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* Pagination container */
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+  }
+  
+  /* Pagination button */
+  .pagination-button {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #3b82f6;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  /* Pagination button hover */
+  .pagination-button:hover {
+    background-color: #2563eb;
+  }
+  
+  /* Disabled pagination button */
+  .pagination-button:disabled {
+    background-color: #d1d5db;
+    color: #6b7280;
+    cursor: not-allowed;
+  }
+  
+  /* Dark mode for pagination button */
+  @media (prefers-color-scheme: dark) {
+    .pagination-button {
+      background-color: #60a5fa;
+    }
+    .pagination-button:hover {
+      background-color: #3b82f6;
+    }
+    .pagination-button:disabled {
+      background-color: #4b5563;
+      color: #9ca3af;
+    }
+  }
+  
+  /* Pagination info (e.g., Page 1 of 3) */
+  .pagination-info {
+    font-size: 0.875rem;
+    color: #374151;
+  }
+  
+  /* Dark mode for pagination info */
+  @media (prefers-color-scheme: dark) {
+    .pagination-info {
+      color: #d1d5db;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .summary-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .summary-list {
+      margin-bottom: 0;
+    }
+    .chart-container {
+      margin: 0;
+    }
+  }
+
+  .export-button{
+    color: white;
+    background-color: orange;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+  }

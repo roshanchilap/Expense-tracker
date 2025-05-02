@@ -1,0 +1,371 @@
+/* TransactionList.css */
+
+/* Container for the transaction list */
+.transaction-list-container {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 24px;
+  }
+  
+  /* Dark mode for container */
+  @media (prefers-color-scheme: dark) {
+    .transaction-list-container {
+      background-color: #1f2937;
+    }
+  }
+  
+  /* Heading */
+  .transaction-list-heading {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 16px;
+  }
+  
+  /* Dark mode for heading */
+  @media (prefers-color-scheme: dark) {
+    .transaction-list-heading {
+      color: #e5e7eb;
+    }
+  }
+  
+  /* No transactions message */
+  .no-transactions {
+    color: #6b7280;
+    font-size: 0.875rem;
+    text-align: center;
+  }
+  
+  /* Dark mode for no transactions message */
+  @media (prefers-color-scheme: dark) {
+    .no-transactions {
+      color: #9ca3af;
+    }
+  }
+  
+  /* Wrapper for transactions (table or cards) */
+  .transactions-wrapper {
+    margin-bottom: 16px;
+  }
+  
+  /* Table styles (desktop) */
+  .transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  
+  /* Table header */
+  .table-header {
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  /* Dark mode for table header */
+  @media (prefers-color-scheme: dark) {
+    .table-header {
+      border-bottom: 1px solid #374151;
+    }
+  }
+  
+  /* Table header cells */
+  .table-header-cell {
+    padding: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+  }
+  
+  /* Dark mode for header cells */
+  @media (prefers-color-scheme: dark) {
+    .table-header-cell {
+      color: #d1d5db;
+    }
+  }
+  
+  /* Table row */
+  .table-row {
+    border-bottom: 1px solid #f3f4f6;
+  }
+  
+  /* Dark mode for table row */
+  @media (prefers-color-scheme: dark) {
+    .table-row {
+      border-bottom: 1px solid #374151;
+    }
+  }
+  
+  /* Table row hover effect */
+  .table-row:hover {
+    background-color: #f9fafb;
+  }
+  
+  /* Dark mode for row hover */
+  @media (prefers-color-scheme: dark) {
+    .table-row:hover {
+      background-color: #374151;
+    }
+  }
+  
+  /* Table cell */
+  .table-cell {
+    padding: 12px 8px;
+    font-size: 0.875rem;
+    color: #374151;
+  }
+  
+  /* Dark mode for table cell */
+  @media (prefers-color-scheme: dark) {
+    .table-cell {
+      color: #e5e7eb;
+    }
+  }
+  
+  /* Capitalize text (for type column) */
+  .text-capitalize {
+    text-transform: capitalize;
+  }
+  
+  /* Card layout (mobile) */
+  .transaction-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  /* Individual transaction card */
+  .transaction-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 0.3s ease-in;
+  }
+  
+  /* Dark mode for card */
+  @media (prefers-color-scheme: dark) {
+    .transaction-card {
+      background-color: #374151;
+      border-color: #4b5563;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  /* Card header (description and amount) */
+  .transaction-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  /* Card description */
+  .transaction-description {
+    font-size: 0.9375rem; /* Slightly larger than 0.875rem for prominence */
+    font-weight: 500;
+    color: #1f2937;
+  }
+  
+  /* Dark mode for description */
+  @media (prefers-color-scheme: dark) {
+    .transaction-description {
+      color: #e5e7eb;
+    }
+  }
+  
+  /* Card amount */
+  .transaction-amount {
+    font-size: 0.9375rem;
+    font-weight: 600;
+  }
+  
+  /* Positive amount */
+  .amount-positive {
+    color: #16a34a;
+  }
+  
+  /* Negative amount */
+  .amount-negative {
+    color: #dc2626;
+  }
+  
+  /* Card body (details) */
+  .transaction-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 8px;
+  }
+  
+  /* Detail row */
+  .transaction-detail {
+    font-size: 0.8125rem; /* Smaller for secondary info */
+    color: #374151;
+    display: flex;
+    gap: 4px;
+  }
+  
+  /* Dark mode for detail */
+  @media (prefers-color-scheme: dark) {
+    .transaction-detail {
+      color: #d1d5db;
+    }
+  }
+  
+  /* Detail label */
+  .detail-label {
+    font-weight: 500;
+    color: #6b7280;
+  }
+  
+  /* Dark mode for detail label */
+  @media (prefers-color-scheme: dark) {
+    .detail-label {
+      color: #9ca3af;
+    }
+  }
+  
+  /* Delete button */
+  .delete-button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #ef4444;
+    background: none;
+    border: 1px solid #ef4444;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  
+  /* Delete button hover/tap */
+  .delete-button:hover,
+  .delete-button:active {
+    color: #ffffff;
+    background-color: #ef4444;
+  }
+  
+  /* Dark mode for delete button */
+  @media (prefers-color-scheme: dark) {
+    .delete-button {
+      color: #f87171;
+      border-color: #f87171;
+    }
+    .delete-button:hover,
+    .delete-button:active {
+      color: #ffffff;
+      background-color: #f87171;
+    }
+  }
+  
+  /* Fade-in animation for cards */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Pagination container */
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+  }
+  
+  /* Mobile pagination layout */
+  @media (max-width: 480px) {
+    .pagination-container {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+  
+  /* Pagination button */
+  .pagination-button {
+    padding: 10px 20px; /* Larger for touch */
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #3b82f6;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    min-width: 100px; /* Ensure touch target size */
+  }
+  
+  /* Pagination button hover/tap */
+  .pagination-button:hover,
+  .pagination-button:active {
+    background-color: #2563eb;
+  }
+  
+  /* Disabled pagination button */
+  .pagination-button:disabled {
+    background-color: #d1d5db;
+    color: #6b7280;
+    cursor: not-allowed;
+  }
+  
+  /* Dark mode for pagination button */
+  @media (prefers-color-scheme: dark) {
+    .pagination-button {
+      background-color: #60a5fa;
+    }
+    .pagination-button:hover,
+    .pagination-button:active {
+      background-color: #3b82f6;
+    }
+    .pagination-button:disabled {
+      background-color: #4b5563;
+      color: #9ca3af;
+    }
+  }
+  
+  /* Pagination info */
+  .pagination-info {
+    font-size: 0.875rem;
+    color: #374151;
+  }
+  
+  /* Dark mode for pagination info */
+  @media (prefers-color-scheme: dark) {
+    .pagination-info {
+      color: #d1d5db;
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .desktop-only {
+      display: none; /* Hide table on mobile */
+    }
+    .mobile-only {
+      display: block; /* Show cards on mobile */
+    }
+    .transaction-list-container {
+      padding: 16px; /* Reduced padding */
+    }
+    .transaction-list-heading {
+      font-size: 1.125rem; /* Slightly smaller */
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .desktop-only {
+      display: table; /* Show table on desktop */
+    }
+    .mobile-only {
+      display: none; /* Hide cards on desktop */
+    }
+  }

@@ -1,0 +1,127 @@
+/* App.css */
+
+/* Main app container */
+.app-container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Responsive padding for smaller screens */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 12px;
+  }
+}
+
+/* Main heading */
+.app-heading {
+  font-size: 2.25rem; /* Larger for emphasis */
+  font-weight: 700;
+  color: #1f2937;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa); /* Gradient text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeInScale 1s ease-out;
+  margin-bottom: 16px;
+}
+
+/* Dark mode for heading */
+@media (prefers-color-scheme: dark) {
+  .app-heading {
+    background: linear-gradient(90deg, #60a5fa, #93c5fd);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Animation for heading */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Balance section */
+.balance-section {
+  margin-bottom: 24px;
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Dark mode for balance section */
+@media (prefers-color-scheme: dark) {
+  .balance-section {
+    background-color: #1f2937;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Balance heading */
+.balance-heading {
+  font-size: 1.5rem; /* Slightly larger for emphasis */
+  font-weight: 600;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Dark mode for balance heading */
+@media (prefers-color-scheme: dark) {
+  .balance-heading {
+    color: #e5e7eb;
+  }
+}
+
+/* Balance amount */
+.balance-amount {
+  font-weight: 700;
+}
+
+/* Conditional coloring for balance */
+.balance-amount.positive {
+  color: #16a34a;
+}
+
+.balance-amount.negative {
+  color: #dc2626;
+}
+
+/* Animation for balance section */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Icon for balance */
+.balance-icon {
+  font-size: 1.5rem;
+}
